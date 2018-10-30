@@ -4,8 +4,6 @@ from tutorial.items import SpplItem
 import logging
 import time
 import requests
-from git import Repo
-import os
 class MinoriSpider(scrapy.spiders.Spider):
     name = "minori"
     allowed_domains = ["http://www.mangagamer.org/"]
