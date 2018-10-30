@@ -18,5 +18,5 @@ class MinoriSpider(scrapy.spiders.Spider):
         sppl["Date"] = time.strftime('%Y-%m-%d',time.localtime())
         sppl["price"] = response.xpath('//span[@class="current"]/text()').extract()[0]
         with open('sppl.json','ab') as f:
-            f.write(str(sppl))
+            f.write(","+str(sppl))
         yield sppl
